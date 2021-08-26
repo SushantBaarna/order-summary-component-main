@@ -28,6 +28,7 @@ body {
 h1,
 h2 {
   color: var(--color-heading);
+  font-weight: 900;
 }
 
 h1 {
@@ -43,6 +44,9 @@ p {
   margin-top: 0;
 }
 
+a {
+  text-decoration: none;
+}
 /*Card*/
 .card {
   border-radius: 20px;
@@ -54,6 +58,31 @@ p {
 /*Button*/
 
 .btn {
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 15px;
+  white-space: nowrap;
+  padding: 2rem 4vw;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  margin: 1rem 0;
+  border: 0;
+}
+
+.btn--primary {
+  background: #fff;
+  transition: background 0.3s;
+  color: var(--color-body);
+}
+
+.btn--primary:hover {
+  background: var(--color-secondary);
+  color: #fff;
+}
+.btn--block {
+  width: 100%;
+  display: inline-block;
 }
 
 /*hero*/
