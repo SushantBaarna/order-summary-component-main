@@ -16,15 +16,27 @@
 html {
   font-size: 62.5%;
 }
-
 body {
   font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: var(--color-body);
   line-height: 1.5;
   opacity: 0.9;
+  background-color: var(--color-primary);
+  background: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+@media screen and (min-width: 1140px) {
+  body {
+    background: url(../images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
 h1,
 h2 {
   color: var(--color-heading);
@@ -36,8 +48,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 p {
@@ -47,45 +60,86 @@ p {
 a {
   text-decoration: none;
 }
+
 /*Card*/
 .card {
   border-radius: 20px;
-  border: 3px solid tomato;
-  box-shadow: 0 0 20px 40px var(--color-accent);
+
   overflow: hidden;
+  background-color: #fff;
+  text-align: center;
 }
-
+.card__header .card__img {
+  max-width: 100%;
+}
+.card__body {
+  padding: 2rem 4rem;
+}
 /*Button*/
-
 .btn {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  padding: 2rem 4vw;
+  border: 0;
   border-radius: 15px;
   white-space: nowrap;
-  padding: 2rem 4vw;
-  outline: 0;
   text-align: center;
   cursor: pointer;
-  margin: 1rem 0;
-  border: 0;
+  outline: 0;
 }
 
 .btn--primary {
-  background: #fff;
-  transition: background 0.3s;
-  color: var(--color-body);
+  transition: opacity 0.3s;
+  background: var(--color-secondary);
+  color: #fff;
 }
 
 .btn--primary:hover {
-  background: var(--color-secondary);
-  color: #fff;
+  opacity: 0.8;
+}
+.btn--secondary {
+  background: #fff;
+  color: var(--color-body);
+  opacity: 0.8;
 }
 .btn--block {
   width: 100%;
   display: inline-block;
 }
 
+.btn--link {
+  text-decoration: underline;
+}
+.btn--link:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
 /*hero*/
 .hero {
   width: 100%;
+}
+.container {
+  max-width: 450px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 5vw auto;
+  box-shadow: 0px 7px 25px -6px rgba(0, 0, 0, 0.68);
+}
+/*media*/
+.media__plan {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.media__plan img {
+  padding: 0 1rem;
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--color-accent);
+  margin-bottom: 2rem;
 }
